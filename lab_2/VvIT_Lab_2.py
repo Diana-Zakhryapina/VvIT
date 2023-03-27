@@ -11,6 +11,7 @@ print("Минимальная температура:", data['main']['temp_min']
 print("Максимальная температура:", data['main']['temp_max'])
 print("Скорость ветра:", data['wind']['speed'])
 print("Видимость:", data['visibility'])
+
 res = requests.get("http://api.openweathermap.org/data/2.5/forecast",
                    params={'q': city, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
 data = res.json()
